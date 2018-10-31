@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "571096653852",
+    "firebase_url": "https://tugasakhir-218707.firebaseio.com",
+    "project_id": "tugasakhir-218707",
+    "storage_bucket": "tugasakhir-218707.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571096653852:android:30dd21da32e124b6",
+        "android_client_info": {
+          "package_name": "id.hansjr.tracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571096653852-8upn92hdosu1c2h3nhccev1hs58jteql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.hansjr.tracking",
+            "certificate_hash": "ab7e32d29d9d1e2f086095e055507df759df237f"
+          }
+        },
+        {
+          "client_id": "571096653852-0dofc0riksm14vqhuja135ui4l20h6tg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAofHqDJHMX1jpIb14Of0BoSUXsqGB_Sho"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571096653852-0dofc0riksm14vqhuja135ui4l20h6tg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
