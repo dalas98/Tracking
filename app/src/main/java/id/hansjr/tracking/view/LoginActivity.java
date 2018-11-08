@@ -47,11 +47,11 @@ public class LoginActivity extends AppCompatActivity {
         sharedPrefManager = new SharedPrefManager(this);
 
         if (sharedPrefManager.getSpLoginValidate()){
-            if (sharedPrefManager.getSpRole().equals("mahasiswa")){
+            if (sharedPrefManager.getSpRole().equals("2")){
                 startActivity(new Intent(LoginActivity.this, Dashboard.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
-            }else if (sharedPrefManager.getSpRole().equals("dosen")){
+            }else if (sharedPrefManager.getSpRole().equals("1")){
                 startActivity(new Intent(LoginActivity.this, DosenDashboard.class)
                         .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                 finish();
@@ -103,17 +103,19 @@ public class LoginActivity extends AppCompatActivity {
                                     String email = jsonResult.getJSONObject("data").getString("email");
                                     String username = jsonResult.getJSONObject("data").getString("username");
                                     String role = jsonResult.getJSONObject("data").getString("role");
+                                    Integer iduser = jsonResult.getJSONObject("data").getInt("id_user");
                                     FirebaseMessaging.getInstance().subscribeToTopic(username);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_NAME, name);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_EMAIL, email);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_USERNAME, username);
                                     sharedPrefManager.saveSPString(SharedPrefManager.SP_ROLE, role);
+                                    sharedPrefManager.saveSPInt(SharedPrefManager.SP_ID_USER, iduser);
                                     sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_LOGIN_VALIDATE, true);
-                                    if(role.equals("mahasiswa")){
+                                    if(role.equals("2")){
                                         startActivity(new Intent(mContext, Dashboard.class)
                                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                         finish();
-                                    }else if(role.equals("dosen")){
+                                    }else if(role.equals("1")){
                                         startActivity(new Intent(mContext, DosenDashboard.class)
                                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                                         finish();

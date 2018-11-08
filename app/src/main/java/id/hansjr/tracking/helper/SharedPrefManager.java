@@ -10,6 +10,7 @@ public class SharedPrefManager {
     public final static String SP_EMAIL = "spEmail";
     public final static String SP_USERNAME = "spUsername";
     public final static String SP_ROLE = "spRole";
+    public final static String SP_ID_USER = "spId_user";
 
     public final static String SP_LOGIN_VALIDATE = "spLoginValidate";
 
@@ -49,6 +50,10 @@ public class SharedPrefManager {
 
     public String getSpRole(){
         return sp.getString(SP_ROLE, "");
+    }
+
+    public int getSpIdUser(){
+        return sp.getInt(SP_ID_USER, 0);
     }
 
     public Boolean getSpLoginValidate(){
